@@ -1,0 +1,791 @@
+:root {
+    --color-primario: #1098ad;
+    --tint-1: #e3fafc;
+    --tint-2: #c5f6fa;
+    --tint-3: #99e9f2;
+    --shade-1: #0c8599;
+    --shade-2: #0b7285;
+    --grey-1: #888;
+    --grey-2: #767676;
+    --grey-3: #6f6f6f;
+    --grey-4: #555;
+    --grey-5: #333;
+}
+
+:root {
+    --color-primario: #1098ad;
+    --tint-1: #28a2b5;
+    --tint-2: #40adbd;
+    --tint-3: #58b7c6;
+    --shade-1: #0c8599;
+    --shade-2: #0b7285;
+    --grey-1: #888;
+    --grey-2: #767676;
+    --grey-3: #6f6f6f;
+    --grey-4: #555;
+    --grey-5: #333;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--grey-4);
+    margin-bottom: 60px;
+
+    overflow-x: hidden;
+}
+
+
+
+/**************************/
+/* GENRAL REUSABLE COMPONENTS */
+/**************************/
+
+.container {
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+
+}
+
+
+.grid:not(:last-child) {
+    margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.grid--center-v {
+    align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+    font-weight: 700;
+    color: var(--grey-5);
+
+    letter-spacing: -0.5px;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--shade-1);
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+    background-color: var(--shade-1);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+    background-color: #fff;
+    color: var(--grey-4);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+    background-color: var(--tint-1);
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+    background-color: var(--shade-2);
+    color: var(--tint-1);
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.btn--form:hover {
+    background-color: #fff;
+    color: var(--grey-4);
+}
+
+.link:link,
+.link:visited {
+    display: inline-block;
+    color: var(--color-primario);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+    color: var(--shade-1);
+    border-bottom: 1px solid transparent;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    line-height: 1.2;
+}
+
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-primario);
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+.margin-right-sm {
+    margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+strong {
+    font-weight: 500;
+}
+
+
+/**************************/
+/* CTA SECTION */
+/**************************/
+
+.section-cta {
+
+    padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    background-image: linear-gradient(to right bottom, var(--tint-3), var(--color-primario));
+    overflow: hidden;
+}
+
+.cta-text-box {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    color: var(--shade-2);
+}
+
+.cta .heading-secondary {
+    color: inherit;
+    margin-bottom: 3.2rem;
+}
+
+.cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+    background-image: linear-gradient(to right bottom,
+            rgba(235, 151, 78, 0.35),
+            rgba(230, 125, 34, 0.35)),
+        url("foto.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+.cta-form label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: var(--tint-1);
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+    color: #aaa;
+}
+
+.cta *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+
+
+
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+}
+
+/* ----- ----- Estilo Adicional para el Mensaje de Error ----- ----- */
+.formulario__mensaje-activo {
+    border: 3px solid #bb2929;
+    background: #bb2929;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+}
+
+
+
+/* ----- ----- Estilo para el Mensaje de Error y Éxito ----- ----- */
+.formulario__mensaje {
+    display: none;
+    font-size: 1.6rem;
+    margin-top: 1.6rem;
+    padding: 1.2rem;
+    border-radius: 9px;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+
+
+:root {
+    --color-primario: #1098ad;
+    --tint-1: #e3fafc;
+    --tint-2: #c5f6fa;
+    --tint-3: #99e9f2;
+    --shade-1: #0c8599;
+    --shade-2: #0b7285;
+    --grey-1: #888;
+    --grey-2: #767676;
+    --grey-3: #6f6f6f;
+    --grey-4: #555;
+    --grey-5: #333;
+}
+
+
+/* :root {
+   --color-primario: #1098ad;
+   --tint-1: #28a2b5;
+   --tint-2: #40adbd;
+   --tint-3: #58b7c6;
+   --shade-1: #0c8599;
+   --shade-2: #0b7285;
+   --grey-1: #888;
+   --grey-2: #767676;
+   --grey-3: #6f6f6f;
+   --grey-4: #555;
+   --grey-5: #333;
+ } */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--grey-4);
+    margin-bottom: 60px;
+
+    overflow-x: hidden;
+}
+
+
+
+/**************************/
+/* GENRAL REUSABLE COMPONENTS */
+/**************************/
+
+.container {
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+
+}
+
+
+.grid:not(:last-child) {
+    margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.grid--center-v {
+    align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+    font-weight: 700;
+    color: var(--grey-5);
+
+    letter-spacing: -0.5px;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--shade-1);
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+    background-color: var(--shade-1);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+    background-color: #fff;
+    color: var(--grey-4);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+    background-color: var(--tint-1);
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+    background-color: var(--shade-2);
+    color: var(--tint-1);
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.btn--form:hover {
+    background-color: #fff;
+    color: var(--grey-4);
+}
+
+.link:link,
+.link:visited {
+    display: inline-block;
+    color: var(--color-primario);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+    color: var(--shade-1);
+    border-bottom: 1px solid transparent;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    line-height: 1.2;
+}
+
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-primario);
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(0, 0, 0, 0.5);
+}
+
+.margin-right-sm {
+    margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+strong {
+    font-weight: 500;
+}
+
+
+/* CTA SECTION */
+
+
+.section-cta {
+    padding: 9.6rem 0;
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* background-color: #e67e22; */
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    background-image: linear-gradient(to right bottom, #1098ad, #e3fafc);
+    overflow: hidden;
+}
+
+
+.cta-text-box {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    color: #052e34;
+}
+
+.cta .heading-secondary {
+    color: inherit;
+    margin-bottom: 3.2rem;
+}
+
+.cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+    background-image: linear-gradient(to right bottom, rgba(151, 231, 242, 0.35), rgba(15, 152, 173, 0.53)), url('foto.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+    align-self: end;
+}
+
+.cta-form label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #e7f5f7;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+    color: #aaa;
+
+}
+
+
+#condiciones {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #e7f5f7;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+
+}
+
+.cta *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(232, 246, 247, 0.5);
+}
+
+
+/* Agrega estos estilos al final de tu hoja de estilo CSS existente */
+/* Estilo para el contenedor del checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Estilo para el checkbox */
+#condiciones {
+    margin-bottom: 1.2rem;
+    width: 20px;
+    height: 20px;
+}
+
+#condiciones+label {
+    font-size: 1.6rem;
+    color: var(--shade-2);
+    display: inline-block;
+
+}
+
+
+
+/* Estilo para el contenedor del checkbox */
+.formulario__grupo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+    justify-content: center;
+
+}
+
+/* Estilo para el checkbox */
+#condiciones {
+    margin-bottom: 1.2rem;
+    width: 20px;
+    height: 20px;
+}
+
+#condiciones+label {
+    font-size: 1.6rem;
+    color: var(--shade-2);
+    display: inline-block;
+}
+
+/* Estilo para los mensajes de error */
+.formulario__input-error {
+    color: #ff4646;
+    font-size: 1.4rem;
+    margin-top: 4px;
+    display: none;
+}
+
+/* Estilo para el mensaje de éxito */
+.formulario__mensaje-exito {
+    background-color: var(--color-primario);
+    padding: 1.6rem;
+    border-radius: 9px;
+    margin-top: 1.6rem;
+    display: none;
+    color: var(--color-primario);
+    font-weight: 600;
+    text-align: center;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+/* Estilo para el mensaje de error general */
+.formulario__mensaje {
+    background-color: #ff4646;
+    padding: 1.6rem;
+    border-radius: 9px;
+    margin-top: 1.6rem;
+    display: none;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
