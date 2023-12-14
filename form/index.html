@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description"
+        content="VaritoFit es una suscripción de fitness impulsada por inteligencia artificial que te ayudará a entrenar de manera efectiva nuevamente, los 365 días del año. Está diseñada según tus gustos personales y necesidades de acondicionamiento físico." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script defer src="js/index.js"></script>
+
+
+    <title>VaritoFit &mdash; Nunca fracasarás de nuevo!</title>
+</head>
+<header class="header">
+    <a href="#">
+    </a>
+
+    <nav class="main-nav">
+        <ul class="main-nav-list">
+            <li><a class="main-nav-link" href="../index.html#how">Cómo funciona</a></li>
+            <li><a class="main-nav-link" href="../index.html#meals">Entrenamientos</a></li>
+            <li>
+                <a class="main-nav-link" href="../index.html#testimonials">Testimonios</a>
+            </li>
+            <li><a class="main-nav-link" href="../index.html#pricing">Precios</a></li>
+            <li><a class="main-nav-link" href="../sobre_mi/index.html">Descubre más</a></li>
+
+            <li><a class="main-nav-link nav-cta" href="#">Prueba gratis</a></li>
+        </ul>
+    </nav>
+
+    <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+</header>
+
+
+
+<section class="section-cta">
+    <div class="container">
+        <div class="cta">
+            <div class="cta-text-box">
+                <h2 class="heading-secondary">
+                    Ofrecemos una semana gratis
+                </h2>
+                <p class="cta-text">
+                    ¿Cualquier duda sobre el seguimiento? Contesto cada correo personalmente, antes de 24 horas,
+                    no
+                    dudes en escribirme si lo necesitas
+                </p>
+                <form id="formulario" class="cta-form" name="sign-up" method="POST">
+                    <div class="formulario__grupo">
+                        <label for="full-name">Nombre completo</label>
+                        <input id="full-name" type="text" placeholder="Tu nombre">
+                        <p class="formulario__input-error">Nombre inválido</p>
+                    </div>
+                    <div class="formulario__grupo">
+                        <label for="email">Correo electrónico</label>
+                        <input id="email" type="email" placeholder="yo@ejemplo.com">
+                        <p class="formulario__input-error">Correo inválido</p>
+                    </div>
+                    <div class="formulario__grupo">
+                        <label for="Contraseña">Contraseña</label>
+                        <input id="Contraseña" type="password" placeholder="Tu contraseña">
+                        <p class="formulario__input-error">Contraseña inválida</p>
+                    </div>
+                    <div class="formulario__grupo">
+                        <label for="select-where">Cómo nos conociste</label>
+                        <select id="select-where">
+                            <option value="">Por favor elige una opción:</option>
+                            <option value="friends">Amigos y familia</option>
+                            <option value="youtube">Youtube video</option>
+                            <option value="podcast">Podcast</option>
+                            <option value="instagram">Instagram ad</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                        <p class="formulario__input-error">Selecciona una opción</p>
+                    </div>
+                    <div class="formulario__grupo-checkbox">
+                        <input id="condiciones" type="checkbox">
+                        <label for="condiciones">Acepta las condiciones</label>
+                        <p class="formulario__input-error">Debes aceptar las condiciones</p>
+                    </div>
+                    <button class="btn btn--form">Sign-up Now</button>
+                    <div id="formulario__mensaje" class="formulario__mensaje">
+                        <p>Error en el formulario. Por favor, verifica tus datos.</p>
+                    </div>
+                </form>
+            </div>
+            <div class="cta-img-box" role="img" aria-label="men"></div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container grid grid--footer">
+        <div class="logo-col">
+            <a href="#" class="footer-logo">
+            </a>
+
+            <ul class="social-links">
+                <li>
+                    <a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-instagram"></ion-icon></a>
+                </li>
+                <li>
+                    <a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a>
+                </li>
+                <li>
+                    <a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                Copyright &copy; <span class="year">2027</span> por Varito trainer, Inc.
+                Todos los derechos reservados.
+            </p>
+        </div>
+
+        <div class="address-col">
+            <p class="footer-heading">Contacto</p>
+            <address class="contacts">
+                <p class="address">
+                    Calle del Dr. Fleming, 30
+                    28036 Madrid </p>
+                <p>
+                    <a class="footer-link" href="tel:415-201-6370">666-666-666</a><br />
+                    <a class="footer-link" href="mailto:hello@alvaro.com">alvarotrainer@gmail.com</a>
+                </p>
+            </address>
+        </div>
+
+        <nav class="nav-col">
+            <p class="footer-heading">Cuenta</p>
+            <ul class="footer-nav">
+                <li><a class="footer-link" href="#">Crear cuenta</a></li>
+                <li><a class="footer-link" href="#">Registrarse</a></li>
+                <li><a class="footer-link" href="#">iOS app</a></li>
+                <li><a class="footer-link" href="#">Android app</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-col">
+            <p class="footer-heading">Compañia</p>
+            <ul class="footer-nav">
+                <li><a class="footer-link" href="#">Sobre mí</a></li>
+                <li><a class="footer-link" href="#">Para empresas</a></li>
+                <li><a class="footer-link" href="#">Para equipos</a></li>
+                <li><a class="footer-link" href="#">Carreras</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-col">
+            <p class="footer-heading">Contenidos</p>
+            <ul class="footer-nav">
+                <li><a class="footer-link" href="#">Recetas gratis </a></li>
+                <li><a class="footer-link" href="#">Centro de ayuda</a></li>
+                <li><a class="footer-link" href="#">Privacidad & términos</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
