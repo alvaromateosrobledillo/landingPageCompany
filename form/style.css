@@ -274,7 +274,7 @@ strong {
     background-image: linear-gradient(to right bottom,
             rgba(235, 151, 78, 0.35),
             rgba(230, 125, 34, 0.35)),
-        url("foto2.jpg");
+        url("img/form/foto2.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -643,7 +643,7 @@ strong {
 }
 
 .cta-img-box {
-    background-image: linear-gradient(to right bottom, rgba(151, 231, 242, 0.35), rgba(15, 152, 173, 0.53)), url('foto2.jpg');
+    background-image: linear-gradient(to right bottom, rgba(151, 231, 242, 0.35), rgba(15, 152, 173, 0.53)), url('img/form/foto2.jpg');
     background-size: cover;
     background-position: center;
 }

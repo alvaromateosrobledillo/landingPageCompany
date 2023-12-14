@@ -815,6 +815,194 @@
  }
 
 
+
+
+
+ /* CTA SECTION */
+
+
+ .section-cta {
+   padding: 9.6rem 0;
+ }
+
+ .cta {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   /* background-color: #e67e22; */
+   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+   border-radius: 11px;
+   background-image: linear-gradient(to right bottom, #1098ad, #e3fafc);
+   overflow: hidden;
+ }
+
+
+ .cta-text-box {
+   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+   color: #052e34;
+ }
+
+ .cta .heading-secondary {
+   color: inherit;
+   margin-bottom: 3.2rem;
+ }
+
+ .cta-text {
+   font-size: 1.8rem;
+   line-height: 1.8;
+   margin-bottom: 4.8rem;
+ }
+
+ .cta-img-box {
+   background-image: linear-gradient(to right bottom, rgba(151, 231, 242, 0.35), rgba(15, 152, 173, 0.53)), url('../img/form/foto2.jpg');
+   background-size: cover;
+   background-position: center;
+ }
+
+ .cta-form {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 3.2rem;
+   row-gap: 2.4rem;
+   align-self: end;
+ }
+
+ .cta-form label {
+   display: block;
+   font-size: 1.6rem;
+   font-weight: 500;
+   margin-bottom: 1.2rem;
+ }
+
+ .cta-form input,
+ .cta-form select {
+   width: 100%;
+   padding: 1.2rem;
+   font-size: 1.8rem;
+   font-family: inherit;
+   color: inherit;
+   border: none;
+   background-color: #e7f5f7;
+   border-radius: 9px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+ }
+
+ .cta-form input::placeholder {
+   color: #aaa;
+
+ }
+
+
+ #condiciones {
+   width: 100%;
+   padding: 1.2rem;
+   font-size: 1.8rem;
+   font-family: inherit;
+   color: inherit;
+   border: none;
+   background-color: #e7f5f7;
+   border-radius: 9px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+
+ }
+
+ .cta *:focus {
+   outline: none;
+   box-shadow: 0 0 0 0.8rem rgba(232, 246, 247, 0.5);
+ }
+
+
+ /* Agrega estos estilos al final de tu hoja de estilo CSS existente */
+ /* Estilo para el contenedor del checkbox */
+ .checkbox {
+   display: flex;
+   align-items: center;
+   gap: 1.6rem;
+   text-align: center;
+   justify-content: center;
+ }
+
+ /* Estilo para el checkbox */
+ #condiciones {
+   margin-bottom: 1.2rem;
+   width: 20px;
+   height: 20px;
+ }
+
+ #condiciones+label {
+   font-size: 1.6rem;
+   color: var(--shade-2);
+   display: inline-block;
+
+ }
+
+
+
+ /* Estilo para el contenedor del checkbox */
+ .formulario__grupo-checkbox {
+   display: flex;
+   align-items: center;
+   gap: 1.6rem;
+   text-align: center;
+   justify-content: center;
+
+ }
+
+ /* Estilo para el checkbox */
+ #condiciones {
+   margin-bottom: 1.2rem;
+   width: 20px;
+   height: 20px;
+ }
+
+ #condiciones+label {
+   font-size: 1.6rem;
+   color: var(--shade-2);
+   display: inline-block;
+ }
+
+ /* Estilo para los mensajes de error */
+ .formulario__input-error {
+   color: #ff4646;
+   font-size: 1.4rem;
+   margin-top: 4px;
+   display: none;
+ }
+
+ /* Estilo para el mensaje de éxito */
+ .formulario__mensaje-exito {
+   background-color: var(--color-primario);
+   padding: 1.6rem;
+   border-radius: 9px;
+   margin-top: 1.6rem;
+   display: none;
+   color: var(--color-primario);
+   font-weight: 600;
+   text-align: center;
+ }
+
+ .formulario__mensaje-exito-activo {
+   display: block;
+ }
+
+ /* Estilo para el mensaje de error general */
+ .formulario__mensaje {
+   background-color: #ff4646;
+   padding: 1.6rem;
+   border-radius: 9px;
+   margin-top: 1.6rem;
+   display: none;
+   color: #fff;
+   font-weight: 600;
+   text-align: center;
+ }
+
+ .formulario__mensaje-activo {
+   display: block;
+ }
+
+
+
+
  /**************************/
  /* FOOTER */
  /**************************/
